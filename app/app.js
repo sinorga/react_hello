@@ -1,7 +1,8 @@
-console.log("webpack rocks!");
+import React from 'react';
+import ReactDOM from "react-dom";
+import Greeting from "./greeting";
 
-class Hello {
-  constructor() {
-    console.log('hello world!');
-  }
-}
+ReactDOM.render(
+  <Greeting name="World"/>,
+  document.body
+);

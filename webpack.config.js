@@ -1,6 +1,9 @@
 module.exports = {
   context: __dirname + "/app",
-  entry: "./app.js",
+  entry: {
+    javascript: "./app.js",
+    html: "./index.html",
+  },
 
   output: {
     filename: "app.js",
@@ -12,7 +15,11 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ["babel-loader"],
+        loader: 'babel?presets[]=react,presets[]=es2015',
+      },
+      {
+        test: /\.html$/,
+        loader: "file?name=[name].[ext]",
       },
     ],
   },
