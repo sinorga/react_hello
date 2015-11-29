@@ -1,14 +1,15 @@
 import React from 'react';
 
-export default React.createClass({
-  propTypes: {
-    name: React.PropTypes.string.isRequired,
-  },
-  render: function render() {
+class Greeting extends React.Component {
+  render() {
     return (
       <div className="greeting">
         <h1>Hello, { this.props.name }!</h1>
       </div>
     );
-  },
-});
+  }
+}
+
+Greeting.propTypes = { name: React.PropTypes.string.isRequired };
+
+export default Greeting;
