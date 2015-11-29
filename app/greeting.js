@@ -1,11 +1,14 @@
-import React from "react";
+import React from 'react';
 
 export default React.createClass({
-  render: function(argument) {
+  propTypes: {
+    name: React.PropTypes.string.isRequired,
+  },
+  render: function render() {
     return (
       <div className="greeting">
-        <h1>Hello, {this.props.name}!</h1>
+        <h1>Hello, { this.props.name }!</h1>
       </div>
     );
-  }
+  },
 });
